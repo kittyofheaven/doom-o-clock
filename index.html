@@ -8,60 +8,134 @@
   </head>
   <body>
 		<header>
-	    <h1>Doom O'Clock</h1>
+	    <!-- <h1>Doom O'Clock</h1> -->
 			<nav>
-				<ul>
+				<ul id="headFlex">
 					<li><a href="#clock">Clock</a></li>
 					<li><a href="#explore">Explore The Data</a></li>
 					<li><a href="#whatCanIDo">What Can I Do</a></li>
 					<li><a href="#about">About</a></li>
 				</ul>
 			</nav>
-			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<div id="whiteBar"></div>
 		</header>
+
+		
 		<!-- The Clock section of the webpage -->
 		<div id="clock" class="bodySection">
-			<!-- coppyed from https://www.w3schools.com/howto/howto_js_countdown.asp -->
-			<!-- Display the countdown timer in an element -->
-			<p id="countDown"></p>
-			<h2>Time until co2 levels reach x</h2>
-			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<div class="maxWidth" id="clockMaxW">
+				<!-- coppyed from https://www.w3schools.com/howto/howto_js_countdown.asp -->
+				<!-- Display the countdown timer in an element -->
+				<h2>Time until co2 levels reach x</h2>
+				<p id="countDown"></p>
+			</div>
 		</div>
 
 
 		<!-- The Explore section of the webpage (were people can look at predicted levels over time) -->
 		<div id="explore" class="bodySection">
-			<h2>Explore The Data</h2>
-				<!-- user in -->
-			 <form>
-				<label for="dateToSend">See etmissions at:</label><br>
-				<input type="date" id="dateToSend" name="dateToSend"
-					value="2021-11-22"
-					min="2021-11-22" max="2100-11-22">
-				<button type="button" onclick="getDateForDate()">Get AI data</button> 
-			</form> 
-			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<div class="maxWidth" id="exploreMaxW">
+				<div id="exploreInput">
+					<h1>Explore The Data</h1>
+						<!-- user input -->
+					<h2>Choose a month and a year to see perdicted pollution stats</h2>
+					<form>
+						<label for="dateToSend">See emissions at:</label><br>
+						<input type="date" id="dateToSend" name="dateToSend" value="2040-01-01"  min="2000-01-01" max="2100-12-31">
+						<button type="button" onclick="getDateForDate()">Get AI data</button> 
+					</form>
+				</div>
+				<div id="exploreOutput">
+					<div class="outputBlock">
+						<h2>MEI</h2>
+						<span class="outputRate">550 ppm</span>
+						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+					</div>
+					<div class="outputBlock">
+						<h2>CO<sub>2</sub></h2>
+						<span class="outputRate">550 ppm</span>
+						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+					</div>
+					<div class="outputBlock">
+						<h2>CH<sub>4</sub></h2>
+						<span class="outputRate">550 ppm</span>
+						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+					</div>
+					<div class="outputBlock">
+						<h2>N<sub>2</sub>O</h2>
+						<span class="outputRate">550 ppm</span>
+						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+					</div>
+					<div class="outputBlock">
+						<h2>CFC-11</h2>
+						<span class="outputRate">550 ppm</span>
+						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+					</div>
+					<div class="outputBlock">
+						<h2>CFC-12</h2>
+						<span class="outputRate">550 ppm</span>
+						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+					</div>
+					<div class="outputBlock">
+						<h2>TSI</h2>
+						<span class="outputRate">550 ppm</span>
+						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+					</div>
+					<div class="outputBlock">
+						<h2>Aerosols</h2>
+						<span class="outputRate">550 ppm</span>
+						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+					</div>
+					<div class="outputBlock">
+						<h2>Temp</h2>
+						<span class="outputRate">550 ppm</span>
+						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+					</div>
+				</div>
+			</div>
 		</div>
 
 
 		<!-- The "what can I do" section of the Page -->
 		<div id="whatCanIDo" class="bodySection">
-			<h2>What Can I Do</h2>
-			<ul>
-				<li><a href="https://teamtrees.org/">Team Trees</a></li>
-				<li><a href="https://teamseas.org/">Team Seas</a></li>
-				<li><a href="https://www.theguardian.com/sustainable-business/2017/jul/10/100-fossil-fuel-companies-investors-responsible-71-global-emissions-cdp-study-climate-change">Hold companies accountable</a></li>
-				<li><a href="#">idk</a></li>
-			</ul>
-			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<div class="maxWidth"  id="whatCanIDoMaxW">
+				<h2>How Can You Help to Fight Climate Change?</h2>
+				<div id="whatOptionContain">
+					<a href="https://teamtrees.org/"><div class="whatBlock">
+						<img class="whatImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Team_Trees_circle_logo.svg/1200px-Team_Trees_circle_logo.svg.png">
+						<span>
+						<h2>Team Trees
+						</h2>
+						<p class="outputCauses">A collaborative fundraiser that raised 20 million U.S. dollars before 2020 to plant 20 million trees. The initiative was started by American YouTubers MrBeast and Mark Rober</p></span>
+					</div></a>
+					<a href="https://teamseas.org/"><div class="whatBlock">
+						<img class="whatImg" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Teamseas-logo.png">
+						<span>
+						<h2>Team Seas
+						</h2>
+						<p class="outputCauses">An international collaborative fundraiser project run by YouTubers MrBeast and Mark Rober. They aim to raise 30 million dollars, which would allow them to remove 30,000,000 pounds of marine debris from the ocean by the end of 2021.</p></span>
+					</div></a>
+					<a href="https://www.theguardian.com/sustainable-business/2017/jul/10/100-fossil-fuel-companies-investors-responsible-71-global-emissions-cdp-study-climate-change"><div class="whatBlock">
+						<img class="whatImg" src="https://cdn.britannica.com/58/139558-050-9EEE9E93/Fireboat-response-crews-blaze-oil-rig-Deepwater-April-21-2010.jpg">
+						<span>
+						<h2>Hold Big Business Accountable
+						</h2>
+						<p class="outputCauses">Just 100 companies responsible for 71% of global emissions. Climate change is not a personal problem and it need solutions that limit corporate emitters.</p></span>
+					</div></a>
+				</div>
+				<p>“We are the first generation to feel the effect of climate change and the last generation who can do something about it.”<br><br>Barack Obama, Former US President</p>
+			</div>
 		</div>
 
 		
 		<!-- The about section of the Page, we should write something about are team people can put their personal webpages and githubs and write about the ML model -->
 		<div id="about" class="bodySection">
-			<h2>About</h2>
-			<p>we are team x, these are our members:. Invifi hacks <a href="https://www.infinihacks.org/">https://www.infinihacks.org/</a></p>
-			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<div id="aboutMaxW" class="maxWidth">
+				<h2>About</h2>
+					
+				<p class="aboutContain">we are team x, these are our members:. Invifi hacks <a href="https://www.infinihacks.org/">https://www.infinihacks.org/</a><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu pulvinar sed consequat nisl, adipiscing ut donec nec eu. Dapibus vivamus mi, nisl eros viverra id ut dolor condimentum. Odio bibendum sodales nulla neque amet amet lectus. Semper nulla dictumst et ut lacus blandit.
+In accumsan, enim egestas risus diam, in id quis. Orci sem urna, odio id duis scelerisque vitae. Feugiat turpis amet, ut amet. Mi in neque, arcu dictum sed. Orci velit sed eget penatibus fames. Id id mattis ipsum nunc lacus malesuada nascetur tortor quis.</p>
+			</div>
 		</div>
     <script src="script.js"></script>
   </body>
