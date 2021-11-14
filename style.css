@@ -422,7 +422,7 @@ header {
 }
 /* making page 2 body responsive */
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 930px) {
+@media (max-width: 932px) {
   #aboutLine{
 		width: 60%;
 		min-width: initial;
