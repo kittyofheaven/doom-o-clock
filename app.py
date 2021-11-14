@@ -1,6 +1,6 @@
 from flask import Flask, Request
 from flask_restful import Api, Resource, reqparse
-from flask_cors import CORS
+# from flask_cors import CORS
 
 from flask import jsonify, request
 from climate_predict import predict
@@ -9,7 +9,7 @@ from doom_predict import doom_predict
 
 app = Flask(__name__)
 api = Api(app)
-cors = CORS(app, resources={r"/api/": {"origins": "*"}})
+# cors = CORS(app, resources={r"/api/": {"origins": "*"}})
 
 
 atmosphere_put_args = reqparse.RequestParser()
@@ -30,7 +30,7 @@ class Atmosphere(Resource):
         return response
     
     def post(self):
-        print(request.data)
+        # print(request.data)
         args = dict(atmosphere_put_args.parse_args())
         print(args)
         if args['Year'] > 2008:
@@ -44,20 +44,20 @@ class Atmosphere(Resource):
         # print(response)
         return response
 
-    def options(self):
-        print(request.data)
-        args = dict(atmosphere_put_args.parse_args())
-        print(args)
-        if args['Year'] > 2008:
-            data = predict(args['Year'], args['Month']) 
-            response = jsonify(data)
-            response.headers.add('Access-Control-Allow-Origin', '*')
-        else :
-            data = get_climate_data(args['Year'], args['Month'])
-            response = jsonify(data)
-            response.headers.add('Access-Control-Allow-Origin', '*')
-        # print(response)
-        return response
+    # def options(self):
+    #     # print(request.data)
+    #     args = dict(atmosphere_put_args.parse_args())
+    #     print(args)
+    #     if args['Year'] > 2008:
+    #         data = predict(args['Year'], args['Month']) 
+    #         response = jsonify(data)
+    #         response.headers.add('Access-Control-Allow-Origin', '*')
+    #     else :
+    #         data = get_climate_data(args['Year'], args['Month'])
+    #         response = jsonify(data)
+    #         response.headers.add('Access-Control-Allow-Origin', '*')
+    #     # print(response)
+    #     return response
 
 # class Atmosphere2(Resource):
 #     def get(self, Year, Month):
