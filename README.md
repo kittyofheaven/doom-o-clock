@@ -29,7 +29,7 @@ First the backend team (Hazel & Arnav) will make a machine learning model with t
 We hope that after we make this website, our webpage visitors will more aware of climate change and try to prevent it
 
 ## Team
-- Arnav (Backend programmer)
+- [Arnav Pandey](https://github.com/splitxorpio) (Backend programmer)
 - [Hazel Handrata](https://github.com/kittyofheaven) (Machine learning engineer & Rest api programmer) 
 - [Marvin Savio](https://github.com/marvinsavio) (Web designer & Demo video creator) 
 - [Theo Halpern](https://github.com/dumax315) (Responsive frontend programmer) 
