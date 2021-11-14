@@ -23,7 +23,7 @@ class Atmosphere(Resource):
         get_data = doom_predict(450.00,310.00,310.00,300.00)
         return get_data
     
-    def put(self):
+    def post(self):
         args = dict(atmosphere_put_args.parse_args())
         if args['Year'] > 2008:
             data = predict(args['Year'], args['Month']) 

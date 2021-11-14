@@ -7,6 +7,6 @@ response = rq.get(BASE + 'atmosphere')
 print(response.status_code)
 print(response.json())
 
-response = rq.put(BASE + 'atmosphere', {'Year' : 2050, 'Month' : 11})
+response = rq.post(BASE + 'atmosphere', {'Year' : 2050, 'Month' : 11})
 print(response.status_code)
 print(response.json())
