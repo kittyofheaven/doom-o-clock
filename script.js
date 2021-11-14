@@ -1,5 +1,4 @@
-// Set the date we're counting down to
-var countDownDate = new Date("Dec 14, 2055").getTime();
+
 
 function updateCountDown() {
 
@@ -29,14 +28,77 @@ function updateCountDown() {
 }
 
 //update the timer on page load
-updateCountDown()
+
 // Update the count down every 1 second
 var x = setInterval(updateCountDown, 1000);
 
-function getDateForDate() {
+async function getDateForDate() {
 	// some how get data from api
-	var dateToSend = document.getElementById("dateToSend").value;
-	alert(dateToSend)
+	let dateToSend = new Date(document.getElementById("dateToSend").value);
+	// console.table('en-US', {
+  //   minimumIntegerDigits: 2,
+  //   useGrouping: false
+  // });
+	document.getElementById("dateToSend").value = dateToSend.getFullYear()+"-"+(dateToSend.getMonth()+1).toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false
+  })+"-01";
+	let resultsObj = await fetchAsync("https://doom-clock-api.herokuapp.com/atmosphere?Year="+dateToSend.getFullYear()+"&Month="+(dateToSend.getMonth()+1));
+	console.log(resultsObj)
+
+
+	let numberElls = document.getElementsByClassName("outputRate");
+
+	for(let i = 0; i < numberElls.length; i++){
+		if(i == 0){
+			numberElls[i].innerText = Math.round(resultsObj.CO2)+" ppmv"
+		}
+		if(i == 1){
+			numberElls[i].innerText = Math.round(resultsObj.CH4)+" ppmv"
+		}
+		if(i == 2){
+			numberElls[i].innerText = Math.round(resultsObj.N2O)+" ppmv"
+		}
+		if(i == 3){
+			numberElls[i].innerText = Math.round(resultsObj.TSI)+" W/m2"
+		}
+		if(i == 4){
+			numberElls[i].innerText = Math.round(resultsObj["CFC-11"])+" ppbv"
+		}
+		if(i == 5){
+			numberElls[i].innerText = Math.round(resultsObj["CFC-12"])+" ppbv"
+		}
+		if(i == 6){
+			numberElls[i].innerText = (parseFloat(resultsObj.Aerosols)*100).toFixed(3)+"% nm"
+		}
+		if(i == 7){
+			numberElls[i].innerText = "+"+parseFloat(resultsObj.Temp).toFixed(3) +" °C"
+		}
+	}
 }
 
-//TODO: no days in selector
+async function fetchAsync(url) {
+  let response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+  });
+  let data = await response.json();
+  return data;
+}
+
+let countDownDate;
+
+async function startCountDownTimer() {
+  let response = await fetch("https://doom-clock-api.herokuapp.com/atmosphere", {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+  });
+  let data = await response.json();
+	// console.table(data)
+	// Set the date we're counting down to
+	countDownDate = new Date(data.doom_year+"-"+data.doom_month+"-01").getTime();
+	updateCountDown()
+}
+
+startCountDownTimer()
+
+
+getDateForDate()

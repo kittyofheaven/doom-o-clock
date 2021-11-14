@@ -26,7 +26,7 @@
 			<div class="maxWidth" id="clockMaxW">
 				<!-- coppyed from https://www.w3schools.com/howto/howto_js_countdown.asp -->
 				<!-- Display the countdown timer in an element -->
-				<h2>Time until co2 levels reach x</h2>
+				<h2 id="title">Time until the effects of climate change are irreversible*</h2>
 				<p id="countDown"></p>
 			</div>
 		</div>
@@ -41,55 +41,55 @@
 					<h2>Choose a month and a year to see perdicted pollution stats</h2>
 					<form>
 						<label for="dateToSend">See emissions at:</label><br>
-						<input type="date" id="dateToSend" name="dateToSend" value="2040-01-01"  min="2000-01-01" max="2100-12-31">
-						<button type="button" onclick="getDateForDate()">Get AI data</button> 
+						<input type="date" id="dateToSend" name="dateToSend" value="2040-01-01"  min="2000-01-01" max="2060-12-31" >
+						<button type="button" id="apicall" onclick="getDateForDate()">Get AI data</button> 
 					</form>
 				</div>
 				<div id="exploreOutput">
-					<div class="outputBlock">
+					<!-- <div class="outputBlock">
 						<h2>MEI</h2>
 						<span class="outputRate">550 ppm</span>
 						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
-					</div>
+					</div> -->
 					<div class="outputBlock">
 						<h2>CO<sub>2</sub></h2>
-						<span class="outputRate">550 ppm</span>
-						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+						<span class="outputRate">550 ppmv</span>
+						<p class="outputCauses">Burning of coal, oil, natural gas,  deforestation,   industrial sector.</p>
 					</div>
 					<div class="outputBlock">
 						<h2>CH<sub>4</sub></h2>
-						<span class="outputRate">550 ppm</span>
-						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+						<span class="outputRate">550 ppmv</span>
+						<p class="outputCauses">Electricity, heat production, agriculture, land use changes.</p>
 					</div>
 					<div class="outputBlock">
 						<h2>N<sub>2</sub>O</h2>
-						<span class="outputRate">550 ppm</span>
-						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
-					</div>
-					<div class="outputBlock">
-						<h2>CFC-11</h2>
-						<span class="outputRate">550 ppm</span>
-						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
-					</div>
-					<div class="outputBlock">
-						<h2>CFC-12</h2>
-						<span class="outputRate">550 ppm</span>
-						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+						<span class="outputRate">550 ppmv</span>
+						<p class="outputCauses">Burning of coal, oil, natural gas, industrial sector.</p>
 					</div>
 					<div class="outputBlock">
 						<h2>TSI</h2>
-						<span class="outputRate">550 ppm</span>
-						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+						<span class="outputRate">550 W/m2</span>
+						<p class="outputCauses">The rate at which the sun's energy is deposited per unit area.</p>
+					</div>
+					<div class="outputBlock">
+						<h2>CFC-11</h2>
+						<span class="outputRate">550 ppbv</span>
+						<p class="outputCauses">Propellant gas in aerosol cans, a refrigerant in air conditioners.</p>
+					</div>
+					<div class="outputBlock">
+						<h2>CFC-12</h2>
+						<span class="outputRate">550 ppbv</span>
+						<p class="outputCauses">Propellant gas in aerosol cans, a refrigerant in air conditioners.</p>
 					</div>
 					<div class="outputBlock">
 						<h2>Aerosols</h2>
-						<span class="outputRate">550 ppm</span>
-						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+						<span class="outputRate">550 nm</span>
+						<p class="outputCauses">The percent change in the number of Aerosols. </p>
 					</div>
 					<div class="outputBlock">
 						<h2>Temp</h2>
-						<span class="outputRate">550 ppm</span>
-						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+						<span class="outputRate">550 °C</span>
+						<p class="outputCauses">The increase average global temperature.</p>
 					</div>
 				</div>
 			</div>
@@ -99,8 +99,8 @@
 		<!-- The "what can I do" section of the Page -->
 		<div id="whatCanIDo" class="bodySection">
 			<div class="maxWidth"  id="whatCanIDoMaxW">
-				<h2>How Can You Help to Fight Climate Change?</h2>
-				<div id="whatOptionContain">
+				<h1>How Can You Help to Fight Climate Change?</h1>
+				<div class="whatOptionContain">
 					<a href="https://teamtrees.org/"><div class="whatBlock">
 						<img class="whatImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Team_Trees_circle_logo.svg/1200px-Team_Trees_circle_logo.svg.png">
 						<span>
@@ -122,8 +122,15 @@
 						</h2>
 						<p class="outputCauses">Just 100 companies responsible for 71% of global emissions. Climate change is not a personal problem and it need solutions that limit corporate emitters.</p></span>
 					</div></a>
+					<a href="https://www.gatesnotes.com/Energy/What-you-can-do-to-fight-climate-change"><div class="whatBlock">
+						<img class="whatImg" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/United_States_Capitol_Building.jpg">
+						<span>
+						<h2>Talk to Your Repersentives
+						</h2>
+						<p class="outputCauses">Make calls, write letters, attend town halls. What you can help your leaders understand is that it’s just as important for them to think about the long-term problem of climate change as it is for them to think about jobs or education or health care.</p></span>
+					</div></a>
 				</div>
-				<p>“We are the first generation to feel the effect of climate change and the last generation who can do something about it.”<br><br>Barack Obama, Former US President</p>
+				<p class="quoteBlock"><span class="quoteText">“We are the first generation to feel the effect of climate change and the last generation who can do something about it.”</span><br><br>Barack Obama, Former US President</p>
 			</div>
 		</div>
 
@@ -131,11 +138,55 @@
 		<!-- The about section of the Page, we should write something about are team people can put their personal webpages and githubs and write about the ML model -->
 		<div id="about" class="bodySection">
 			<div id="aboutMaxW" class="maxWidth">
-				<h2>About</h2>
-					
-				<p class="aboutContain">we are team x, these are our members:. Invifi hacks <a href="https://www.infinihacks.org/">https://www.infinihacks.org/</a><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu pulvinar sed consequat nisl, adipiscing ut donec nec eu. Dapibus vivamus mi, nisl eros viverra id ut dolor condimentum. Odio bibendum sodales nulla neque amet amet lectus. Semper nulla dictumst et ut lacus blandit.
-In accumsan, enim egestas risus diam, in id quis. Orci sem urna, odio id duis scelerisque vitae. Feugiat turpis amet, ut amet. Mi in neque, arcu dictum sed. Orci velit sed eget penatibus fames. Id id mattis ipsum nunc lacus malesuada nascetur tortor quis.</p>
-			</div>
+				<div class="row">
+					<div>
+          	<h2>About The Project</h2>
+						<p class="aboutContain">
+							Have you ever wondered when will the earth end? it will happen eventually, but when will it happen? Introducing... doom o'clock, a website that features a countdown that is predicted not based on black magic wizardry, 
+							but based on actual data using artificial intelegence and machine learning. We have used are moddel to calculate when CO<sub>2</sub> levels will surpass 450 ppm, an amount scientents and determined will indicate irreversible climate damage. You might be asking, "cool, but what are the datas the countdown is based on?" we feed doom o'clock's 
+							data from the Climatic Research Unit at the University of East Anglia, ESRL/NOAA Global Monitoring Division, Godard Institute for Space Studies at NASA, SOLARIS-HEPPA project website, 
+							and from the ESRL/NOAA Physical Sciences Division so it can predict the outcome at a certain month of a certain year. You might also say "im scared, can we extend the countdown?" 
+							because the majority of the datas are caused by humans, then sure we can, doom 'o clock shows non-profit organizations and projects that are trying their hardest to make climate change cease to 
+							exist, so we got a bunch of these resources, jumbled them all up together, and put them in our resources tab so you can check out these major projects and help them out.
+						</p>
+					</div>
+					<div id="aboutLine"></div>
+					<div>
+						<h2>About The Devs</h2>
+						<div class="whatOptionContain">
+							<a href="https://github.com/kittyofheaven"><div class="whatBlock">
+							<img class="whatImg" src="hazel.jpg">
+							<span>
+							<h2>Hazel Handrata
+							</h2>
+							<p class="outputCauses">I'm the machine learning & backend rest api programmer, i just have a quote to say : "I think i've already been a Nam Do San, but where's my Seo Dal Mi"</p></span>
+							</div></a>
+							<a href="https://github.com/dumax315"><div class="whatBlock">
+								<img class="whatImg" src="theo.jpg">
+								<span>
+								<h2>Theo Halpern
+								</h2>
+								<p class="outputCauses">I am the Frontend Developer, I turned the design ideas into responsive css and html and I used javascript to communicate with the Flask API.</p></span>
+							</div></a>
+							<a href="https://www.gatesnotes.com/Energy/What-you-can-do-to-fight-climate-change"><div class="whatBlock">
+								<img class="whatImg" src="marvin3.jpg">
+								<span>
+								<h2>Marvin Savio Zahir
+								</h2>
+								<p class="outputCauses">I'm, the designer in this team. I like art, french fries with ice cream, and your mom</p></span>
+							</div></a>
+							</p>
+							<a href="https://www.gatesnotes.com/Energy/What-you-can-do-to-fight-climate-change"><div class="whatBlock">
+								<img class="whatImg" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/United_States_Capitol_Building.jpg">
+								<span>
+								<h2>Arnav
+								</h2>
+								<p class="outputCauses"></p></span>
+							</div></a>
+						</div>
+					</div>
+        </div>
+      </div>				
 		</div>
     <script src="script.js"></script>
   </body>
