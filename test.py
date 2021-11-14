@@ -1,7 +1,7 @@
 import requests as rq
 import time
 
-BASE = "https://doom-clock-api.herokuapp.com/"
+BASE = "http://127.0.0.1:5000/"
 
 response = rq.get(BASE + 'atmosphere')
 print(response.status_code)
