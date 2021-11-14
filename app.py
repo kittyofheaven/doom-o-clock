@@ -71,4 +71,4 @@ api.add_resource(Atmosphere,"/atmosphere")
 # api.add_resource(Atmosphere2,"/atmosphere2/<int:Year>/<int:Month>")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
