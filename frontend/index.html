@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Doom o'Clock</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+		<header>
+	    <!-- <h1>Doom O'Clock</h1> -->
+			<nav>
+				<ul id="headFlex">
+					<li><a href="#clock">Clock</a></li>
+					<li><a href="#explore">Explore The Data</a></li>
+					<li><a href="#whatCanIDo">What Can I Do</a></li>
+					<li><a href="#about">About</a></li>
+				</ul>
+			</nav>
+			<div id="whiteBar"></div>
+		</header>
+
+		
+		<!-- The Clock section of the webpage -->
+		<div id="clock" class="bodySection">
+			<div class="maxWidth" id="clockMaxW">
+				<!-- coppyed from https://www.w3schools.com/howto/howto_js_countdown.asp -->
+				<!-- Display the countdown timer in an element -->
+				<h2 id="title">Time until the effects of climate change are irreversible*</h2>
+				<p id="countDown"></p>
+			</div>
+		</div>
+
+
+		<!-- The Explore section of the webpage (were people can look at predicted levels over time) -->
+		<div id="explore" class="bodySection">
+			<div class="maxWidth" id="exploreMaxW">
+				<div id="exploreInput">
+					<h1>Explore The Data</h1>
+						<!-- user input -->
+					<h2>Choose a month and a year to see perdicted pollution stats</h2>
+					<form>
+						<label for="dateToSend">See emissions at:</label><br>
+						<input type="date" id="dateToSend" name="dateToSend" value="2040-01-01"  min="2000-01-01" max="2060-12-31" >
+						<button type="button" id="apicall" onclick="getDateForDate()">Get AI data</button> 
+					</form>
+				</div>
+				<div id="exploreOutput">
+					<!-- <div class="outputBlock">
+						<h2>MEI</h2>
+						<span class="outputRate">550 ppm</span>
+						<p class="outputCauses">Deforestation, fossil fuels, oil, respiration, decomposition</p>
+					</div> -->
+					<div class="outputBlock">
+						<h2>CO<sub>2</sub></h2>
+						<span class="outputRate">550 ppmv</span>
+						<p class="outputCauses">Burning of coal, oil, natural gas,  deforestation,   industrial sector.</p>
+					</div>
+					<div class="outputBlock">
+						<h2>CH<sub>4</sub></h2>
+						<span class="outputRate">550 ppmv</span>
+						<p class="outputCauses">Electricity, heat production, agriculture, land use changes.</p>
+					</div>
+					<div class="outputBlock">
+						<h2>N<sub>2</sub>O</h2>
+						<span class="outputRate">550 ppmv</span>
+						<p class="outputCauses">Burning of coal, oil, natural gas, industrial sector.</p>
+					</div>
+					<div class="outputBlock">
+						<h2>TSI</h2>
+						<span class="outputRate">550 W/m2</span>
+						<p class="outputCauses">The rate at which the sun's energy is deposited per unit area.</p>
+					</div>
+					<div class="outputBlock">
+						<h2>CFC-11</h2>
+						<span class="outputRate">550 ppbv</span>
+						<p class="outputCauses">Propellant gas in aerosol cans, a refrigerant in air conditioners.</p>
+					</div>
+					<div class="outputBlock">
+						<h2>CFC-12</h2>
+						<span class="outputRate">550 ppbv</span>
+						<p class="outputCauses">Propellant gas in aerosol cans, a refrigerant in air conditioners.</p>
+					</div>
+					<div class="outputBlock">
+						<h2>Aerosols</h2>
+						<span class="outputRate">550 nm</span>
+						<p class="outputCauses">The percent change in the number of Aerosols. </p>
+					</div>
+					<div class="outputBlock">
+						<h2>Temp</h2>
+						<span class="outputRate">550 °C</span>
+						<p class="outputCauses">The increase average global temperature.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- The "what can I do" section of the Page -->
+		<div id="whatCanIDo" class="bodySection">
+			<div class="maxWidth"  id="whatCanIDoMaxW">
+				<h1>How Can You Help to Fight Climate Change?</h1>
+				<div class="whatOptionContain">
+					<a href="https://teamtrees.org/"><div class="whatBlock">
+						<img class="whatImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Team_Trees_circle_logo.svg/1200px-Team_Trees_circle_logo.svg.png">
+						<span>
+						<h2>Team Trees
+						</h2>
+						<p class="outputCauses">A collaborative fundraiser that raised 20 million U.S. dollars before 2020 to plant 20 million trees. The initiative was started by American YouTubers MrBeast and Mark Rober</p></span>
+					</div></a>
+					<a href="https://teamseas.org/"><div class="whatBlock">
+						<img class="whatImg" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Teamseas-logo.png">
+						<span>
+						<h2>Team Seas
+						</h2>
+						<p class="outputCauses">An international collaborative fundraiser project run by YouTubers MrBeast and Mark Rober. They aim to raise 30 million dollars, which would allow them to remove 30,000,000 pounds of marine debris from the ocean by the end of 2021.</p></span>
+					</div></a>
+					<a href="https://www.theguardian.com/sustainable-business/2017/jul/10/100-fossil-fuel-companies-investors-responsible-71-global-emissions-cdp-study-climate-change"><div class="whatBlock">
+						<img class="whatImg" src="https://cdn.britannica.com/58/139558-050-9EEE9E93/Fireboat-response-crews-blaze-oil-rig-Deepwater-April-21-2010.jpg">
+						<span>
+						<h2>Hold Big Business Accountable
+						</h2>
+						<p class="outputCauses">Just 100 companies responsible for 71% of global emissions. Climate change is not a personal problem and it need solutions that limit corporate emitters.</p></span>
+					</div></a>
+					<a href="https://www.gatesnotes.com/Energy/What-you-can-do-to-fight-climate-change"><div class="whatBlock">
+						<img class="whatImg" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/United_States_Capitol_Building.jpg">
+						<span>
+						<h2>Talk to Your Repersentives
+						</h2>
+						<p class="outputCauses">Make calls, write letters, attend town halls. What you can help your leaders understand is that it’s just as important for them to think about the long-term problem of climate change as it is for them to think about jobs or education or health care.</p></span>
+					</div></a>
+				</div>
+				<p class="quoteBlock"><span class="quoteText">“We are the first generation to feel the effect of climate change and the last generation who can do something about it.”</span><br><br>Barack Obama, Former US President</p>
+			</div>
+		</div>
+
+		
+		<!-- The about section of the Page, we should write something about are team people can put their personal webpages and githubs and write about the ML model -->
+		<div id="about" class="bodySection">
+			<div id="aboutMaxW" class="maxWidth">
+				<div class="row">
+					<div>
+          	<h2>About The Project</h2>
+						<p class="aboutContain">
+							&emsp; Have you ever wondered when there will be no more going back from climate change's effects? It will happen eventually, but when will it happen? Introducing... doom o'clock, a website that features a countdown predicted, not based on black magic wizardry, but based on actual data using artificial intelligence and machine learning. We have used our model to calculate when CO<sub>2</sub> levels will surpass 450 ppm, an amount scientists have determined will indicate irreversible climate damage. <br><br>&emsp; You might be asking, "cool, but what is the data the countdown is based on?" we fed doom o'clock data from the Climatic Research Unit at the University of East Anglia, ESRL/NOAA Global Monitoring Division, Godard Institute for Space Studies at NASA, SOLARIS-HEPPA project website, and from the ESRL/NOAA Physical Sciences Division so it can predict the climate at a certain month of a certain year. You might also say "I'm scared, can we extend the countdown?" The majority of the data is caused by humans, then surely we can, doom 'o clock shows non-profit organizations and projects that are trying their hardest to make climate change cease to exist, so we got a bunch of these resources, jumbled them all up together, and put them in our resources tab so you can check out these major projects and help them out.
+						</p>
+					</div>
+					<div id="aboutLine"></div>
+					<div>
+						<h2>About The Devs</h2>
+						<div class="whatOptionContain">
+							<a href="https://github.com/kittyofheaven"><div class="whatBlock">
+							<img class="whatImg" src="hazel.jpg">
+							<span>
+							<h2>Hazel Handrata
+							</h2>
+							<p class="outputCauses">I'm the machine learning & backend rest api programmer, i just have a quote to say : "I think i've already been a Nam Do San, but where's my Seo Dal Mi"</p></span>
+							</div></a>
+							<a href="https://github.com/dumax315"><div class="whatBlock">
+								<img class="whatImg" src="theo.jpg">
+								<span>
+								<h2>Theo Halpern
+								</h2>
+								<p class="outputCauses">I am the Frontend Developer, I turned the design ideas into responsive css and html and I used javascript to communicate with the Flask API.</p></span>
+							</div></a>
+							<a href="https://github.com/marvinsavio"><div class="whatBlock">
+								<img class="whatImg" src="marvin3.jpg">
+								<span>
+								<h2>Marvin Savio Zahir
+								</h2>
+								<p class="outputCauses">I'm, the designer in this team. I like art, french fries with ice cream, and your mom</p></span>
+							</div></a>
+							<a href="https://github.com/splitxorpio"><div class="whatBlock">
+								<img class="whatImg" src="arnav.jpg">
+								<span>
+								<h2>Arnav Pandey
+								</h2>
+								<p class="outputCauses">I am one of the backend developers, I like doing hackathons, I helped with the animations in the project and did some backend.</p></span>
+							</div></a>
+						</div>
+					</div>
+        </div>
+      </div>				
+		</div>
+    <script src="script.js"></script>
+  </body>
+</html>

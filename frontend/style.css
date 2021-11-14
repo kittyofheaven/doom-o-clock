@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+body {
+	margin: 0px;
+	padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.bodySection {
+	background: rgb(4,0,74);
+	width: 100%;
+	scroll-margin-top: calc(3.3em + 18px);
+}
+
+
+.maxWidth {
+	max-width: 600px;
+	margin: auto;
+	height: 100%;
+	
+}
+
+/* code for the header */
+header {
+	position: fixed;
+	width: 100%;
+	background: black;
+	right: 0;
+	top:0;
+  z-index: 100000;
+}
+
+#headFlex {
+	display: flex;
+	justify-content: space-around;
+	color:white;
+	list-style-type: none;
+	padding:0px;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	max-width: 600px;
+	font-size: 1.2em;
+	flex-wrap: wrap;
+}
+#headFlex a {
+	color: white;
+	text-decoration: none;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+#whiteBar{
+	width: 100%;
+	height: .3em;
+	background: white;
+}
+
+@media (max-width: 600px) {
+  header{
+		display: none;
+	}
+}
+
+/* Code for Page 1 */
+
+#clock {
+	/* earth bg (unsplash) */
+
+	/* Auto Layout
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 240px 0px;
+
+	position: absolute;
+	height: 896px;
+	left: 0px;
+	right: 0px;
+	top: 88px; */
+	background:linear-gradient(180deg, rgba(45, 50, 130, 0) 75%, #2D3282 100%), url(earthbg.png);
+	/* background:linear-gradient(180deg, rgba(45, 50, 130, 0.3) 0%, #2D3282 100%), url(earthbg.png); */
+	background-size: cover;
+	background-position: bottom center; 
+	height: 95vh;
+	color: white;
+}
+#countDown{
+	/* countdown box */
+
+	/* Auto Layout */
+	display: inline;;
+
+	text-align: center;
+	font-size: 24px;
+	padding: 1em;
+	max-width: 80%;
+
+	border: 6px solid #FFFFFF;
+	box-sizing: border-box;
+	border-radius: 24px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	background:rgba(0, 0, 0, 0.34);
+}
+
+#clockMaxW {
+	vertical-align: middle;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+/* Code for Page 2 (expolore the DATA) */
+#explore {
+	padding-top: 1em;
+	padding-bottom: 1.5em;
+	background:#2D3282;
+	display: flex;
+	min-height: 90vh;
+}
+#exploreMaxW {
+	width: 90%;
+	max-width: 1350px;
+	/* border: 5px solid red; */
+	display: flex;
+}
+
+
+/* Page 2 Input */
+#exploreInput {
+	/* flex-grow: 3; */
+	width: 30%;
+	/* border: 5px solid red; */
+}
+#exploreInput h1 {
+	margin-left: 0px;
+	color:white;
+}
+#exploreInput h2 {
+	margin-left: 0px;
+	color:white;
+}
+#exploreInput form {
+	margin-left: 0px;
+	color:white;
+}
+#exploreInput form input[type=date]{
+	padding: .5em;
+	font-size: larger;
+	margin: .5em;
+	margin-left: 0px;
+}
+#exploreInput form button[type=button]{
+	padding-bottom: .5em;
+	font-size: larger;
+	margin: .5em;
+	margin-left: 0px;
+} 
+
+
+/* page 2 output blocks */
+
+#exploreOutput {
+	/* flex-grow: 7; */
+	width: 75%;
+	/* border: 5px solid red; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	/* min-height: calc(6em + 130px*3); */
+}
+
+.outputBlock{
+	/* data visualizer */
+	
+	margin: .7em;
+	margin-left: .4em;
+	margin-right: .4em;
+	/* Auto Layout */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 8px 8px 8px 16px;
+	height: max-content;
+	min-height: 145px;
+	max-width: 190px;
+	background: #FFFFFF;
+
+	/* Shadow / xl */
+	box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+	border-radius: 24px;
+  transition-duration: 0.45s;
+}
+#apicall{
+  padding-top: 6px;
+}
+.outputBlock:hover{
+  transform: scale(1.04);
+  transition-duration: 0.45s;
+  background-color:rgb(185, 185, 185) ;
+}
+.outputBlock h2 {
+	margin: 0px;
+	margin-left: 0px;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+/* #countDown, .quoteBlock{
+  animation: float 6s ease-in-out infinite;
+} */
+.outputRate {
+	/* Frame 39 */
+	padding: 4px 8px;
+
+	/* Indigo/700 */
+	background: #3538CD;
+	border-radius: 8px;
+
+	color: white;
+	font-size: larger;
+}
+
+.outputCauses {
+	font-size: smaller;
+	margin: 0px;
+	margin-top: .25em;
+
+}
+/* making page 2 body responsive */
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  #exploreOutput, #exploreInput {
+    /* flex: 100%; */
+		width:85%;
+  }
+	#exploreMaxW {
+		flex-direction: column;
+		align-items: center;
+	}
+	#countDown {
+		font-size: initial;
+	}
+}
+
+
+
+/* Page 3 */
+#whatCanIDo {
+	background: linear-gradient(180deg, #2D3282 0%, #101828 100%);
+	margin-top: -16px;
+	width: 100%;
+	display: flex;
+	min-height: 90vh;
+}
+#whatCanIDoMaxW {
+	width: 90%;
+	max-width: 1350px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	text-align: center;
+	justify-content: center;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+.whatOptionContain {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	
+}
+.whatOptionContain a{
+	display: flex;
+	color: Black;
+	text-decoration: none;
+}
+#whatCanIDoMaxW h1{
+	margin-top: 0px;
+}
+.whatImg {
+	width: 4.5em;
+	height: 4.5em;
+	float: left;
+	border-radius: 50%;
+	margin-right: 1em;
+}
+.whatBlock{
+	/* data visualizer */
+	
+	margin: 1em;
+	margin-left: .4em;
+	margin-right: .4em;
+	/* Auto Layout */
+	align-items: flex-start;
+	padding: 1em;
+	height: max-content;
+	min-height: 200px;
+	max-width: 300px;
+	background: #FFFFFF;
+	/* display: flex; */
+	/* Shadow / xl */
+	box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+	border-radius: 24px;
+  transition-duration: 0.45s;
+}
+.whatBlock:hover {
+  background-color:rgb(185, 185, 185) ;
+	/* box-shadow: 0px 20px 0px -4px #FFFFFF, 0px 8px 0px -4px #FFFFFF; */
+  transform: scale(1.04);
+  transition-duration: 0.45s;
+}
+
+.whatBlock h2 {
+	margin: 0px;
+	font-size: larger;
+	color:rgb(83, 83, 83);
+}
+.whatBlock span {
+	text-align: left;
+}
+
+
+.quoteText {
+		/* Display XS / Medium */
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 32px;
+	max-width: 700px;
+	/* or 133% */
+	text-align: center;
+}
+
+/* section 4 about */
+#about {
+	background: #101828;
+	margin-top: -20px;
+	width: 100%;
+	min-height: 90vh;
+	display: flex;
+}
+#aboutMaxW {
+	display: flex;
+	flex-direction: column;
+	color: white;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	max-width: initial;
+	min-height: 500px;
+}
+.aboutContain {
+	max-width: 800px;
+	text-align: left;
+	font-size: 16px;
+	padding: 1em;
+
+	/* border: 6px solid #FFFFFF;
+	box-sizing: border-box;
+	border-radius: 24px; */
+
+	margin-left: auto;
+	margin-right: auto;
+}
+.quoteBlock {
+	max-width: 800px;
+	margin:auto;
+	margin-top: 4em;
+}
+.row{
+  width: 100%;
+  flex-direction: row;
+	flex-wrap: wrap;
+  /* align-items: center; */
+	justify-content: center;
+	display: flex;
+}
+.row div {
+	width: 40%;
+	min-width: 400px;
+	max-width: 600px;
+}
+.row .whatBlock {
+	min-width: 0px;
+	width:100%;
+}
+
+.row .whatOptionContain {
+	max-width: initial;
+	min-width: initial;
+	width: 100%;
+}
+.row .whatOptionContain a{
+	max-width: initial;
+	min-width: 250px;
+	width: 45%;
+}
+
+#aboutLine{
+	width: 0px;
+	min-width: 0px;
+	margin: 4em;
+	border-left:  4px solid rgb(114, 114, 114);
+}
+/* making page 2 body responsive */
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 930px) {
+  #aboutLine{
+		width: 60%;
+		min-width: initial;
+		margin: 3em;
+		border-left:initial;
+		border-bottom:  4px solid rgb(114, 114, 114);
+	}
+	.aboutContain {
+		width: 75%
+	}
+}
+
+h2 {
+	/* should change this i think */
+	margin: 16px;
+	/* margin-left: 0px; */
+}
+
+
+
+
+
