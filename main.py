@@ -1,7 +1,6 @@
 from flask import Flask
-from flask_restful import Api, Resource, reqparse, abort
-from flask import request
-from tensorflow.python.framework.tensor_conversion_registry import get
+from flask_restful import Api, Resource, reqparse
+
 from climate_predict import predict
 from climate_data import get_climate_data
 from doom_predict import doom_predict
@@ -36,4 +35,4 @@ api.add_resource(Home,"/")
 api.add_resource(Atmosphere,"/atmosphere")
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=False)
