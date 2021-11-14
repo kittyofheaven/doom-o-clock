@@ -20,7 +20,7 @@ class Home(Resource):
 
 class Atmosphere(Resource):
     def get(self):
-        get_data = doom_predict(450.00,450.00,450.00,450.00)
+        get_data = doom_predict(450.00,310.00,310.00,300.00)
         return get_data
     
     def put(self):
