@@ -94,7 +94,7 @@ async function startCountDownTimer() {
   let data = await response.json();
 	// console.table(data)
 	// Set the date we're counting down to
-	countDownDate = new Date(data.doom_year+"-"+data.doom_month+"-01").getTime();
+	countDownDate = new Date(data.doom_year+"-"+(data.doom_month+1)+"-01").getTime();
 	updateCountDown()
 }
 
