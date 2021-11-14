@@ -2,7 +2,6 @@
 import pandas as pd 
 import tensorflow as tf
 import numpy as np
-import json
 
 X = pd.read_csv('climate_change.csv')
 X.pop('MEI'), X.pop('CO2'), X.pop('CH4'), X.pop('N2O'), X.pop('CFC-11'), X.pop('CFC-12'), X.pop('TSI'),X.pop('Aerosols'),X.pop('Temp')
