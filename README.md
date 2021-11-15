@@ -3,7 +3,7 @@ Doom o’clock is a website/project that features a countdown of “when will th
 Make sure to check out the branch frontend to see our front end progression.
 
 ## Inspiration
-I got the inspiration from a book "Will fart end the earth?" by Gleen Murphy, the book tells that in the future we must do a change so that the earth can stay healthy enough for human
+I got the inspiration from a book "Will fart end the earth?" by Gleen Murphy, the book tells that in the future we must do a change so that the earth can stay healthy enough for human _~Hazel_
 
 ## What it does
 The website is connected to the backend api that we built and predicted based on factual data from various sources, namely the Climatic Research Unit at the University of East Anglia, ESRL/NOAA Global Monitoring Division, Godard Institute for Space Studies at NASA, SOLARIS-HEPPA project website, and from the ESRL/NOAA Physical Sciences Division while using Artificial Intelligence and Machine Learning
@@ -34,3 +34,6 @@ We hope that after we make this website, our webpage visitors will more aware of
 - [Hazel Handrata](https://github.com/kittyofheaven) (Machine learning engineer & Rest api programmer) 
 - [Marvin Savio](https://github.com/marvinsavio) (Web designer & Demo video creator) 
 - [Theo Halpern](https://github.com/dumax315) (Responsive frontend programmer) 
+
+## Achievments
+- Winning infinihacks hackathon as The best environment project
