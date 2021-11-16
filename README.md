@@ -2,6 +2,9 @@
 Doom o’clock is a website/project that features a countdown of “when will the earth end” and a greenhouse gas effect emission prediction that’s predicted not based on black magic wizardry, but predicted based on factual data from various sources, namely the Climatic Research Unit at the University of East Anglia, ESRL/NOAA Global Monitoring Division, Godard Institute for Space Studies at NASA, SOLARIS-HEPPA project website, and from the ESRL/NOAA Physical Sciences Division while using Artificial Intelligence and Machine Learning. As a bonus Doom 'o clock also shows non-profit organizations and projects that are trying their hardest to make climate change cease to exist, and how you can do so too. 
 Make sure to check out the branch frontend to see our front end progression.
 
+## Demo video
+[![Watch the video](https://img.youtube.com/vi/grlAmeC-Rro/hqdefault.jpg)](https://www.youtube.com/watch?v=grlAmeC-Rro)
+
 ## Inspiration
 I got the inspiration from a book "Will fart end the earth?" by Gleen Murphy, the book tells that in the future we must do a change so that the earth can stay healthy enough for human _~Hazel_
 
