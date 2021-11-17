@@ -33,10 +33,10 @@ First the backend team (Hazel & Arnav) will make a machine learning model with t
 We hope that after we make this website, our webpage visitors will more aware of climate change and try to prevent it
 
 ## Team
-- [Arnav Pandey](https://github.com/splitxorpio) [Devpost](https://devpost.com/Split) (Backend programmer)
-- [Hazel Handrata](https://github.com/kittyofheaven) [Devpost](https://devpost.com/kittyofheaven) (Machine learning engineer & Rest api programmer) 
-- [Marvin Savio](https://github.com/marvinsavio) [Devpost](https://devpost.com/marvinzahir20) (Web designer & Demo video creator) 
-- [Theo Halpern](https://github.com/dumax315) [Devpost](https://devpost.com/dumax315) (Responsive frontend programmer) 
+- [Arnav Pandey](https://github.com/splitxorpio) (Backend programmer) [Devpost](https://devpost.com/Split)
+- [Hazel Handrata](https://github.com/kittyofheaven) (Machine learning engineer & Rest api programmer) [Devpost](https://devpost.com/kittyofheaven) 
+- [Marvin Savio](https://github.com/marvinsavio) (Web designer & Demo video creator) [Devpost](https://devpost.com/marvinzahir20) 
+- [Theo Halpern](https://github.com/dumax315) (Responsive frontend programmer) [Devpost](https://devpost.com/dumax315) 
 
 ## Achievments
 - Winning infinihacks hackathon as The best environment [project](https://devpost.com/software/doom-o-clock) 
