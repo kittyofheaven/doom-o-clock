@@ -33,10 +33,31 @@ First the backend team (Hazel & Arnav) will make a machine learning model with t
 We hope that after we make this website, our webpage visitors will more aware of climate change and try to prevent it
 
 ## Team
-- [Arnav Pandey](https://github.com/splitxorpio) (Backend programmer)
-- [Hazel Handrata](https://github.com/kittyofheaven) (Machine learning engineer & Rest api programmer) 
-- [Marvin Savio](https://github.com/marvinsavio) (Web designer & Demo video creator) 
-- [Theo Halpern](https://github.com/dumax315) (Responsive frontend programmer) 
+- [Arnav Pandey](https://github.com/splitxorpio) [Devpost](https://devpost.com/Split) (Backend programmer)
+- [Hazel Handrata](https://github.com/kittyofheaven) [Devpost](https://devpost.com/kittyofheaven) (Machine learning engineer & Rest api programmer) 
+- [Marvin Savio](https://github.com/marvinsavio) [Devpost](https://devpost.com/marvinzahir20) (Web designer & Demo video creator) 
+- [Theo Halpern](https://github.com/dumax315) [Devpost](https://devpost.com/dumax315) (Responsive frontend programmer) 
 
 ## Achievments
-- Winning infinihacks hackathon as The best environment project
+- Winning infinihacks hackathon as The best environment [project](https://devpost.com/software/doom-o-clock) 
+
+## API reference
+https://doom-clock-api.herokuapp.com/atmosphere
+please include our license to your app if you want to use our api
+
+- GET : 
+ 
+return JSON 
+```
+{"doom_month": int, "doom_year": int}
+```
+- POST :
+
+POST JSON 
+```
+{Year : int , Month : int}
+```
+return JSON
+```
+{"Aerosols": "str", "CFC-11": "str", "CFC-12": "str", "CH4": "str", "CO2": "str", "N2O": "str", "TSI": "str", "Temp": "str"}
+```
