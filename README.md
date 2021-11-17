@@ -43,7 +43,7 @@ We hope that after we make this website, our webpage visitors will more aware of
 
 ## API reference
 https://doom-clock-api.herokuapp.com/atmosphere
-please include our license to your app if you want to use our api
+please include our license to your app/repository if you want to use our api
 
 - GET : 
  
